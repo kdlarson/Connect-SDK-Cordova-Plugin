@@ -114,7 +114,7 @@ AndroidInstall.prototype.cloneConnectSDK = function () {
 		for (var i = 0; i < files.length; i++) {
 			if (files[i].indexOf('Connect-SDK-Android') !== -1) {
 				csdkDirectory = files[i];
-				return Q.nfcall(exec, commands.mv + " "" + safePath("./cordova-plugin-connectsdk/" + csdkDirectory) + "" "" + safePath("./csdk_tmp/" + csdkDirectory) + """);
+				return Q.nfcall(exec, commands.mv + " " + safePath("./cordova-plugin-connectsdk/" + csdkDirectory) + " " + safePath("./csdk_tmp/" + csdkDirectory));
 			}
 		}
 	})
